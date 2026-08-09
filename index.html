@@ -204,6 +204,50 @@
   .layer-row.on .switch{ background: var(--gold); }
   .layer-row.on .switch::after{ left:17px; }
 
+  .layer-row .chevron-btn{
+    width:20px;height:20px;
+    display:flex;align-items:center;justify-content:center;
+    background:none;border:none;
+    color: var(--ink-soft);
+    cursor:pointer;
+    flex-shrink:0;
+    transition: transform .18s ease, color .15s ease;
+  }
+  .layer-row .chevron-btn:hover{ color: var(--gold-deep); }
+  .layer-row .chevron-btn.open{ transform: rotate(180deg); }
+  .layer-row .chevron-btn svg{ width:12px;height:12px; }
+
+  .poi-sublist{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height .22s ease;
+  }
+  .poi-sublist.open{ max-height:420px; }
+
+  .poi-sublist-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 6px 6px 29px;
+    font-size:12px;
+    color: var(--ink-soft);
+    cursor:pointer;
+    border-radius:6px;
+  }
+  .poi-sublist-item:hover{ background: var(--cream); color: var(--ink); }
+  .poi-sublist-item .n{
+    flex:1;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .poi-sublist-item .d{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color: var(--gold-deep);
+    flex-shrink:0;
+  }
+
   .radius-note{
     font-size:12px;
     color: var(--ink-soft);
@@ -291,6 +335,26 @@
     color: var(--ink);
   }
 
+  .directions-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    margin-top:10px;
+    width:100%;
+    background: var(--gold);
+    color:#fff !important;
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:8px;
+    transition: background .15s ease;
+  }
+  .directions-btn:hover{ background: var(--gold-deep); }
+  .directions-btn svg{ width:13px;height:13px; flex-shrink:0; }
+
   .home-pop .eyebrow{
     font-size:10.5px;
     font-weight:700;
@@ -326,8 +390,14 @@
     border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     box-shadow: 0 2px 6px rgba(0,0,0,.35), inset 0 0 0 2px rgba(255,255,255,.55);
+    cursor:pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
   }
-  .poi-marker svg{ width:14px;height:14px; }
+  .poi-marker:hover{
+    transform: scale(1.22);
+    box-shadow: 0 4px 12px rgba(0,0,0,.45), inset 0 0 0 2px rgba(255,255,255,.8);
+  }
+  .poi-marker svg{ width:14px;height:14px; pointer-events:none; }
 
   .home-marker{ position:relative; width:34px; height:34px; }
   .home-marker .ring{
@@ -465,7 +535,11 @@ const homeIcon = L.divIcon({
 
 function fmt(n){ return (Math.round(n*10)/10).toString(); }
 
-function buildPopup(catKey, meta, poi){
+function buildPopup(catKey, meta, poi, property){
+  const drivingText = poi.driving ? `${fmt(poi.driving.miles)} mi · ${fmt(poi.driving.minutes)} min` : '—';
+  const walkingText = poi.walking ? `${fmt(poi.walking.miles)} mi · ${fmt(poi.walking.minutes)} min` : '—';
+  const dirUrl = `https://www.google.com/maps/dir/?api=1&origin=${property.lat},${property.lon}&destination=${poi.lat},${poi.lon}&travelmode=driving`;
+  const arrowIcon = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg>';
   return `
     <div class="poi-pop">
       <span class="cat-tag" style="background:${meta.hex}">${catKey}</span>
@@ -474,13 +548,16 @@ function buildPopup(catKey, meta, poi){
       <div class="stats">
         <div class="stat-box">
           <div class="k">Driving</div>
-          <div class="v">${fmt(poi.driving.miles)} mi · ${fmt(poi.driving.minutes)} min</div>
+          <div class="v">${drivingText}</div>
         </div>
         <div class="stat-box">
           <div class="k">Walking</div>
-          <div class="v">${fmt(poi.walking.miles)} mi · ${fmt(poi.walking.minutes)} min</div>
+          <div class="v">${walkingText}</div>
         </div>
       </div>
+      <a class="directions-btn" href="${dirUrl}" target="_blank" rel="noopener">
+        ${arrowIcon}Get Directions
+      </a>
     </div>`;
 }
 
@@ -512,20 +589,28 @@ homeMarker.bindPopup(`
     <p class="addr2">Buda, TX 78610 · Sunfield Ph Two Sec Four</p>
     <div class="price">$709,000</div>
     <div class="specs2"><span><b>5</b> bed</span><span><b>4</b> bath</span><span><b>4,052</b> sqft</span></div>
+    <a class="directions-btn" href="https://www.google.com/maps/dir/?api=1&destination=${PROPERTY.lat},${PROPERTY.lon}" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.71 11.29l-9-9a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42l9 9a1 1 0 0 0 1.42 0l9-9a1 1 0 0 0 0-1.42zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg>
+      Get Directions to This Home
+    </a>
   </div>
 `);
 
 const layerGroups = {};
 const sidebarState = {};
 
-function renderSidebar(categories){
+function renderSidebar(categories, markersByCategory){
   const list = document.getElementById('layerList');
   list.innerHTML = '';
   Object.keys(CATEGORY_META).forEach(catKey => {
     const meta = CATEGORY_META[catKey];
     const catData = categories[catKey];
-    const count = catData ? catData.pois.length : 0;
+    const pois = catData ? catData.pois : [];
+    const count = pois.length;
     const hasAny = count > 0;
+
+    const block = document.createElement('div');
+    block.className = 'layer-block';
 
     const row = document.createElement('div');
     row.className = 'layer-row' + (hasAny ? ' on' : ' disabled');
@@ -533,13 +618,55 @@ function renderSidebar(categories){
       <span class="dot" style="background:${meta.hex}"></span>
       <span class="label">${catData ? catData.label : catKey}</span>
       <span class="count">${count}</span>
+      ${hasAny
+        ? '<button type="button" class="chevron-btn" aria-label="Show list"><svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+        : '<span style="width:20px;flex-shrink:0;"></span>'}
       <span class="switch"></span>
     `;
+    block.appendChild(row);
+
     if (hasAny){
-      row.addEventListener('click', () => toggleLayer(catKey, row));
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('.chevron-btn')) return;
+        toggleLayer(catKey, row);
+      });
       sidebarState[catKey] = row;
+
+      const sublistEl = document.createElement('div');
+      sublistEl.className = 'poi-sublist';
+
+      pois.forEach((poi, i) => {
+        const item = document.createElement('div');
+        item.className = 'poi-sublist-item';
+        const distText = poi.driving ? fmt(poi.driving.miles) + ' mi' : '—';
+        item.innerHTML = `<span class="n">${poi.name}</span><span class="d">${distText}</span>`;
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const group = layerGroups[catKey];
+          if (!map.hasLayer(group)){ map.addLayer(group); row.classList.add('on'); }
+          const marker = markersByCategory[catKey][i];
+          map.flyTo(marker.getLatLng(), 17, { duration: 0.6 });
+          window.setTimeout(() => marker.openPopup(), 350);
+          if (window.innerWidth <= 860){
+            sidebarEl.classList.remove('open');
+            scrimEl.classList.remove('show');
+          }
+        });
+        sublistEl.appendChild(item);
+      });
+
+      block.appendChild(sublistEl);
+
+      const chevronBtn = row.querySelector('.chevron-btn');
+      chevronBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = sublistEl.classList.toggle('open');
+        chevronBtn.classList.toggle('open', isOpen);
+        chevronBtn.setAttribute('aria-label', isOpen ? 'Hide list' : 'Show list');
+      });
     }
-    list.appendChild(row);
+
+    list.appendChild(block);
   });
 }
 
@@ -557,22 +684,27 @@ function toggleLayer(catKey, row){
 
 function loadData(data){
   const categories = data.categories;
-  renderSidebar(categories);
+  const markersByCategory = {};
 
   Object.keys(CATEGORY_META).forEach(catKey => {
     const meta = CATEGORY_META[catKey];
     const catData = categories[catKey];
     const group = L.layerGroup();
+    const markers = [];
     if (catData && catData.pois.length){
       catData.pois.forEach(poi => {
         const marker = L.marker([poi.lat, poi.lon], { icon: poiMarker(catKey) });
-        marker.bindPopup(buildPopup(catKey, meta, poi));
+        marker.bindPopup(buildPopup(catKey, meta, poi, PROPERTY));
         group.addLayer(marker);
+        markers.push(marker);
       });
       group.addTo(map);
     }
     layerGroups[catKey] = group;
+    markersByCategory[catKey] = markers;
   });
+
+  renderSidebar(categories, markersByCategory);
 
   document.getElementById('showAll').addEventListener('click', () => {
     Object.keys(sidebarState).forEach(catKey => {
