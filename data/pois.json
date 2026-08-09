@@ -1,0 +1,577 @@
+{
+  "generated_at": "2026-08-09T09:58:03Z",
+  "property": {
+    "address": "258 Tangerine Dr, Buda, TX 78610",
+    "latitude": 30.0815899,
+    "longitude": -97.8099067
+  },
+  "search_radius_meters": 3000,
+  "categories": {
+    "schools": {
+      "label": "Schools",
+      "pois": [
+        {
+          "name": "Sunfield Elementary School",
+          "lat": 30.081673605245886,
+          "lon": -97.80933559465552,
+          "address": "155 Vista Gardens Drive, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.03,
+          "driving": {
+            "miles": 0.06,
+            "minutes": 0.4
+          },
+          "walking": {
+            "miles": 0.06,
+            "minutes": 1.2
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Doral Academy",
+          "lat": 30.080973860857725,
+          "lon": -97.81546977696907,
+          "address": "1333 Fire Cracker Drive, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.34,
+          "driving": {
+            "miles": 0.71,
+            "minutes": 3.0
+          },
+          "walking": {
+            "miles": 0.68,
+            "minutes": 14.6
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Buda Elementary School",
+          "lat": 30.09500619778933,
+          "lon": -97.82098873059788,
+          "address": "1060 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 1.14,
+          "driving": {
+            "miles": 1.96,
+            "minutes": 6.9
+          },
+          "walking": {
+            "miles": 1.76,
+            "minutes": 37.7
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Tom Green Elementary",
+          "lat": 30.06383320804429,
+          "lon": -97.81859938701486,
+          "address": "1301 Old Goforth Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 1.33,
+          "driving": {
+            "miles": 1.96,
+            "minutes": 6.4
+          },
+          "walking": {
+            "miles": 1.98,
+            "minutes": 42.5
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "McCormick Middle School",
+          "lat": 30.0543008057764,
+          "lon": -97.82425220901332,
+          "address": "5700 Dacy Lane, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 2.07,
+          "driving": {
+            "miles": 4.0,
+            "minutes": 10.6
+          },
+          "walking": {
+            "miles": 3.53,
+            "minutes": 75.8
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "hospitals": {
+      "label": "Hospitals",
+      "pois": [
+        {
+          "name": "Baylor Scott And White Medical Center - Buda",
+          "lat": 30.076674635151,
+          "lon": -97.82008648500441,
+          "address": "5330 Overpass Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.7,
+          "driving": {
+            "miles": 1.18,
+            "minutes": 3.5
+          },
+          "walking": {
+            "miles": 1.11,
+            "minutes": 23.7
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "grocery": {
+      "label": "Grocery Stores",
+      "pois": [
+        {
+          "name": "H-E-B",
+          "lat": 30.0879136253985,
+          "lon": -97.82148764992505,
+          "address": "15300 South Interstate 35, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.82,
+          "driving": {
+            "miles": 1.4,
+            "minutes": 4.9
+          },
+          "walking": {
+            "miles": 1.37,
+            "minutes": 29.5
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Walmart Supercenter",
+          "lat": 30.086586695239912,
+          "lon": -97.82500840625092,
+          "address": "690 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.97,
+          "driving": {
+            "miles": 1.66,
+            "minutes": 5.7
+          },
+          "walking": {
+            "miles": 1.63,
+            "minutes": 35.0
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "transit": {
+      "label": "Transit Stops",
+      "pois": []
+    },
+    "parks": {
+      "label": "Parks",
+      "pois": [
+        {
+          "name": "Unnamed Park",
+          "lat": 30.076310563342027,
+          "lon": -97.8101956062783,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.36,
+          "driving": {
+            "miles": 0.45,
+            "minutes": 1.9
+          },
+          "walking": {
+            "miles": 0.51,
+            "minutes": 10.9
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Unnamed Park",
+          "lat": 30.079734674708764,
+          "lon": -97.81267388507837,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.21,
+          "driving": {
+            "miles": 0.46,
+            "minutes": 2.3
+          },
+          "walking": {
+            "miles": 0.46,
+            "minutes": 9.8
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Unnamed Park",
+          "lat": 30.085621700032704,
+          "lon": -97.80338391960773,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.48,
+          "driving": {
+            "miles": 0.67,
+            "minutes": 2.3
+          },
+          "walking": {
+            "miles": 0.7,
+            "minutes": 15.1
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Unnamed Park",
+          "lat": 30.076000545513462,
+          "lon": -97.81566236703434,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.52,
+          "driving": {
+            "miles": 0.82,
+            "minutes": 2.9
+          },
+          "walking": {
+            "miles": 0.81,
+            "minutes": 17.4
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Unnamed Park",
+          "lat": 30.076199865634887,
+          "lon": -97.79740957563891,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.84,
+          "driving": {
+            "miles": 1.2,
+            "minutes": 3.7
+          },
+          "walking": {
+            "miles": 1.15,
+            "minutes": 24.6
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Unnamed Park",
+          "lat": 30.071787251665164,
+          "lon": -97.82067840618082,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.93,
+          "driving": {
+            "miles": 1.71,
+            "minutes": 4.9
+          },
+          "walking": {
+            "miles": 1.6,
+            "minutes": 34.2
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Stoneridge Park",
+          "lat": 30.070319613620555,
+          "lon": -97.82331201195846,
+          "address": "1131 Stone Rim Loop, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 1.12,
+          "driving": {
+            "miles": 1.84,
+            "minutes": 5.1
+          },
+          "walking": {
+            "miles": 1.75,
+            "minutes": 37.5
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Bradfield Village Park",
+          "lat": 30.08306262350298,
+          "lon": -97.83445051439716,
+          "address": "130 Crescent Drive, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 1.47,
+          "driving": {
+            "miles": 2.48,
+            "minutes": 7.2
+          },
+          "walking": {
+            "miles": 2.37,
+            "minutes": 50.9
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Historic Stagecoach Park",
+          "lat": 30.091277840315335,
+          "lon": -97.83704149759117,
+          "address": "880 Main Street, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 1.76,
+          "driving": {
+            "miles": 2.58,
+            "minutes": 7.7
+          },
+          "walking": {
+            "miles": 2.64,
+            "minutes": 56.6
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Green Meadows Park",
+          "lat": 30.062929400847594,
+          "lon": -97.81529791395964,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 1.33,
+          "driving": {
+            "miles": 2.63,
+            "minutes": 7.4
+          },
+          "walking": {
+            "miles": 1.99,
+            "minutes": 42.6
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "banks": {
+      "label": "Banks",
+      "pois": [
+        {
+          "name": "A+ Federal Credit Union",
+          "lat": 30.089554663080428,
+          "lon": -97.81709939361242,
+          "address": "15295 South Interstate 35, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.7,
+          "driving": {
+            "miles": 1.14,
+            "minutes": 4.6
+          },
+          "walking": {
+            "miles": 1.1,
+            "minutes": 23.7
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Falcon Bank",
+          "lat": 30.088586086801556,
+          "lon": -97.81999716209717,
+          "address": "1795 North Main Street, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.77,
+          "driving": {
+            "miles": 1.4,
+            "minutes": 5.0
+          },
+          "walking": {
+            "miles": 1.36,
+            "minutes": 29.3
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Randolph Brooks Federal Credit Union",
+          "lat": 30.07768060637941,
+          "lon": -97.8232685071561,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.84,
+          "driving": {
+            "miles": 1.56,
+            "minutes": 4.4
+          },
+          "walking": {
+            "miles": 1.31,
+            "minutes": 28.0
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Bank of America",
+          "lat": 30.0822477,
+          "lon": -97.8236328,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.82,
+          "driving": {
+            "miles": 1.83,
+            "minutes": 5.7
+          },
+          "walking": {
+            "miles": 1.75,
+            "minutes": 37.5
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Austin - TELCO",
+          "lat": 30.085103148294188,
+          "lon": -97.82471394432562,
+          "address": null,
+          "osm_id": null,
+          "straight_line_miles": 0.92,
+          "driving": {
+            "miles": 2.22,
+            "minutes": 5.9
+          },
+          "walking": {
+            "miles": 1.86,
+            "minutes": 39.9
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "restaurants": {
+      "label": "Restaurants",
+      "pois": [
+        {
+          "name": "Pizza Hut",
+          "lat": 30.088252,
+          "lon": -97.8224814,
+          "address": "1671 Main Street, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.88,
+          "driving": {
+            "miles": 1.46,
+            "minutes": 5.1
+          },
+          "walking": {
+            "miles": 1.42,
+            "minutes": 30.6
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "IM Thai Cuisine Buda",
+          "lat": 30.0881794,
+          "lon": -97.8224767,
+          "address": "1671 Main Street",
+          "osm_id": null,
+          "straight_line_miles": 0.88,
+          "driving": {
+            "miles": 1.47,
+            "minutes": 5.1
+          },
+          "walking": {
+            "miles": 1.43,
+            "minutes": 30.7
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Cracker Barrel",
+          "lat": 30.08494424914466,
+          "lon": -97.82255268345068,
+          "address": "550 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.79,
+          "driving": {
+            "miles": 1.67,
+            "minutes": 5.5
+          },
+          "walking": {
+            "miles": 1.63,
+            "minutes": 35.1
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Chili's",
+          "lat": 30.084403361704773,
+          "lon": -97.82343510127065,
+          "address": "420 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.83,
+          "driving": {
+            "miles": 2.25,
+            "minutes": 5.7
+          },
+          "walking": {
+            "miles": 1.73,
+            "minutes": 37.1
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Logan's Roadhouse",
+          "lat": 30.083587748904947,
+          "lon": -97.82315269547269,
+          "address": "419 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.81,
+          "driving": {
+            "miles": 2.26,
+            "minutes": 5.8
+          },
+          "walking": {
+            "miles": 1.83,
+            "minutes": 39.2
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Willie's Joint BBQ",
+          "lat": 30.0864698,
+          "lon": -97.8364551,
+          "address": "824 Main Street, Buda",
+          "osm_id": null,
+          "straight_line_miles": 1.63,
+          "driving": {
+            "miles": 2.29,
+            "minutes": 6.3
+          },
+          "walking": {
+            "miles": 2.29,
+            "minutes": 49.2
+          },
+          "distance_source": "routed"
+        }
+      ]
+    },
+    "pharmacies": {
+      "label": "Pharmacies",
+      "pois": [
+        {
+          "name": "H-E-B Pharmacy",
+          "lat": 30.0882398,
+          "lon": -97.8213117,
+          "address": "15300 I 35, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.82,
+          "driving": {
+            "miles": 1.39,
+            "minutes": 4.9
+          },
+          "walking": {
+            "miles": 1.35,
+            "minutes": 28.9
+          },
+          "distance_source": "routed"
+        },
+        {
+          "name": "Walmart Pharmacy",
+          "lat": 30.086964,
+          "lon": -97.8246306,
+          "address": "690 Old San Antonio Road, Buda, TX, 78610",
+          "osm_id": null,
+          "straight_line_miles": 0.96,
+          "driving": {
+            "miles": 1.63,
+            "minutes": 5.5
+          },
+          "walking": {
+            "miles": 1.6,
+            "minutes": 34.4
+          },
+          "distance_source": "routed"
+        }
+      ]
+    }
+  }
+}
